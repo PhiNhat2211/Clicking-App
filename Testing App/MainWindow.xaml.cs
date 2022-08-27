@@ -22,8 +22,8 @@ namespace Testing_App
     {
         public int clickCount = 1;
         public int doubleClickCount = 1;
-        public float firstValue = 0;
-        public float secondValue = 0;
+        public float firstTimerValue = 0;
+        public float secondTimerValue = 0;
         public float timerValue = 0;
 
         Stopwatch timer = new Stopwatch();
@@ -38,21 +38,21 @@ namespace Testing_App
             timer.Start();
 
             // Calculating the time between 2 clicks
-            if (clickLbl.Content.ToString() != "0" && firstValue != 0)
+            if (countLbl.Content.ToString() != "0" && firstTimerValue != 0)
             {
-                secondValue = timer.ElapsedMilliseconds;
-                timerValue = secondValue - firstValue;
-                firstValue = secondValue;
+                secondTimerValue = timer.ElapsedMilliseconds;
+                timerValue = secondTimerValue - firstTimerValue;
+                firstTimerValue = secondTimerValue;
             }
             // Check if the 1st run
             else
             {
-                firstValue = timer.ElapsedMilliseconds;
-                timerValue = firstValue;
+                firstTimerValue = timer.ElapsedMilliseconds;
+                timerValue = firstTimerValue;
             }
 
             // Adding the timeValue after calculating to get the true result
-            clickLbl.Content = clickCount++;
+            countLbl.Content = clickCount++;
             timeLbl.Content = timerValue + " ms";
 
             // Show popup if value < 0.1s
@@ -68,13 +68,13 @@ namespace Testing_App
             // Reset variables to their 1st value
             clickCount = 1;
             doubleClickCount = 1;
-            firstValue = 0;
-            secondValue = 0;
+            firstTimerValue = 0;
+            secondTimerValue = 0;
             timerValue = 0;
 
             // Reset on UI
             timeLbl.Content = "0 ms";
-            clickLbl.Content = "0";
+            countLbl.Content = "0";
             doubleLbl.Content = "0";
 
             timer.Reset();

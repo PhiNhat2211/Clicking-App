@@ -15,7 +15,7 @@
             <Label Name="timeLbl" FontSize="50px" HorizontalContentAlignment="Left" Margin="0,50">0 ms</Label>
 
             <Label HorizontalContentAlignment="Center" FontSize="25px" FontWeight="Bold">Count</Label>
-            <Label Name="clickLbl" FontSize="50px" HorizontalContentAlignment="Center" Margin="50">0</Label>
+            <Label Name="countLbl" FontSize="50px" HorizontalContentAlignment="Center" Margin="50">0</Label>
 
             <Label HorizontalContentAlignment="Right" FontSize="25px" FontWeight="Bold">Double</Label>
             <Label Name="doubleLbl" FontSize="50px" HorizontalContentAlignment="Right" Margin="0,50">0</Label>
