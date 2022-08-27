@@ -37,32 +37,36 @@ namespace Testing_App
         {
             sw.Start();
 
+            // Calculate the time between 2 clicks process
             if (clickLbl.Content.ToString() != "0" && firstValue != 0)
             {
                 secondValue = sw.ElapsedMilliseconds;
                 timerValue = secondValue - firstValue;
                 firstValue = secondValue;
             }
+            // Check if the first run 
             else
             {
                 firstValue = sw.ElapsedMilliseconds;
                 timerValue = firstValue;
             }
 
-            if (timerValue < 100 && timeLbl.Content.ToString() != "0 ms")
-            {
-                doubleLbl.Content = doubleClickCount++;
-                MessageBox.Show("Double clicked");
-            }
-
-            timeLbl.Content = timerValue + " ms";
+            // Adding the timeValue after calculating to get the true result
             clickLbl.Content = clickCount++;
+            timeLbl.Content = timerValue + " ms";
+
+            // Show popup if value < 0.1s
+            if (timerValue < 1000 && timeLbl.Content.ToString() != "0 ms")
+            {
+                MessageBox.Show("Double clicked");
+                doubleLbl.Content = doubleClickCount++;
+            }
         }
 
         private void Btn_Reset_Click(object sender, RoutedEventArgs e)
         {
             clickCount = 1;
-            doubleClickCount = 0;
+            doubleClickCount = 1;
             firstValue = 0;
             secondValue = 0;
             timerValue = 0;
