@@ -49,13 +49,13 @@ namespace Testing_App
                 timerValue = firstValue;
             }
 
-            if (timerValue < 100 && timeLbl.Content.ToString() != "0")
+            if (timerValue < 100 && timeLbl.Content.ToString() != "0 ms")
             {
                 doubleLbl.Content = doubleClickCount++;
                 MessageBox.Show("Double clicked");
             }
 
-            timeLbl.Content = timerValue;
+            timeLbl.Content = timerValue + " ms";
             clickLbl.Content = clickCount++;
         }
 
@@ -67,7 +67,7 @@ namespace Testing_App
             secondValue = 0;
             timerValue = 0;
 
-            timeLbl.Content = "0";
+            timeLbl.Content = "0 ms";
             clickLbl.Content = "0";
             doubleLbl.Content = "0";
 
