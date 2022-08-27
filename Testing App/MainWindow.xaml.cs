@@ -26,7 +26,7 @@ namespace Testing_App
         public float secondValue = 0;
         public float timerValue = 0;
 
-        Stopwatch sw = new Stopwatch();
+        Stopwatch timer = new Stopwatch();
 
         public MainWindow()
         {
@@ -35,17 +35,19 @@ namespace Testing_App
 
         private void Btn_Count_Click(object sender, RoutedEventArgs e)
         {
-            sw.Start();
+            timer.Start();
 
+            // Calculating the time between 2 clicks
             if (clickLbl.Content.ToString() != "0" && firstValue != 0)
             {
-                secondValue = sw.ElapsedMilliseconds;
+                secondValue = timer.ElapsedMilliseconds;
                 timerValue = secondValue - firstValue;
                 firstValue = secondValue;
             }
+            // Check if the 1st run
             else
             {
-                firstValue = sw.ElapsedMilliseconds;
+                firstValue = timer.ElapsedMilliseconds;
                 timerValue = firstValue;
             }
 
@@ -63,17 +65,19 @@ namespace Testing_App
 
         private void Btn_Reset_Click(object sender, RoutedEventArgs e)
         {
+            // Reset variables to their 1st value
             clickCount = 1;
             doubleClickCount = 1;
             firstValue = 0;
             secondValue = 0;
             timerValue = 0;
 
+            // Reset on UI
             timeLbl.Content = "0 ms";
             clickLbl.Content = "0";
             doubleLbl.Content = "0";
 
-            sw.Reset();
+            timer.Reset();
         }
     }
 }
