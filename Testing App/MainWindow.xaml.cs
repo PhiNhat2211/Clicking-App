@@ -22,9 +22,9 @@ namespace Testing_App
     {
         public int clickCount = 1;
         public int doubleClickCount = 1;
-        public float firstTimerValue = 0;
-        public float secondTimerValue = 0;
-        public float timerValue = 0;
+        public float firstTimeValue = 0;
+        public float secondTimeValue = 0;
+        public float timeValue = 0;
 
         Stopwatch timer = new Stopwatch();
 
@@ -38,25 +38,25 @@ namespace Testing_App
             timer.Start();
 
             // Calculating the time between 2 clicks
-            if (countLbl.Content.ToString() != "0" && firstTimerValue != 0)
+            if (countLbl.Content.ToString() != "0" && firstTimeValue != 0)
             {
-                secondTimerValue = timer.ElapsedMilliseconds;
-                timerValue = secondTimerValue - firstTimerValue;
-                firstTimerValue = secondTimerValue;
+                secondTimeValue = timer.ElapsedMilliseconds;
+                timeValue = secondTimeValue - firstTimeValue;
+                firstTimeValue = secondTimeValue;
             }
             // Check if the 1st run
             else
             {
-                firstTimerValue = timer.ElapsedMilliseconds;
-                timerValue = firstTimerValue;
+                firstTimeValue = timer.ElapsedMilliseconds;
+                timeValue = firstTimeValue;
             }
 
             // Adding the timeValue after calculating to get the true result
             countLbl.Content = clickCount++;
-            timeLbl.Content = timerValue + " ms";
+            timeLbl.Content = timeValue + " ms";
 
             // Show popup if value < 0.1s
-            if (timerValue < 100 && timeLbl.Content.ToString() != "0 ms")
+            if (timeValue < 100 && timeLbl.Content.ToString() != "0 ms")
             {
                 doubleLbl.Content = doubleClickCount++;
                 MessageBox.Show("Double clicked");
@@ -68,9 +68,9 @@ namespace Testing_App
             // Reset variables to their 1st value
             clickCount = 1;
             doubleClickCount = 1;
-            firstTimerValue = 0;
-            secondTimerValue = 0;
-            timerValue = 0;
+            firstTimeValue = 0;
+            secondTimeValue = 0;
+            timeValue = 0;
 
             // Reset on UI
             timeLbl.Content = "0 ms";
