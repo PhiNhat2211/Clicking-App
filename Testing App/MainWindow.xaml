@@ -22,7 +22,7 @@
         </Grid>
 
         <Grid x:Name="buttonGrid" VerticalAlignment="Bottom" Width="500" Height="200">
-            <Button Name="btnCount" Height="50px" Width="150px" FontSize="25px" Click="Btn_Count_Click" Background="Green" Foreground="White" HorizontalAlignment="Left">Click</Button>
+            <Button Name="btnCount" Height="50px" Width="150px" FontSize="25px" Click="Btn_Count_Click" Background="Blue" Foreground="White" HorizontalAlignment="Left">Click</Button>
             <Button Name="btnReset" Height="50px" Width="150px" FontSize="25px" Click="Btn_Reset_Click" Background="Red" Foreground="White" HorizontalAlignment="Right">Reset</Button>
         </Grid>
     </Grid>

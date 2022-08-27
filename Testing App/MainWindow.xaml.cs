@@ -37,14 +37,12 @@ namespace Testing_App
         {
             sw.Start();
 
-            // Calculate the time between 2 clicks process
             if (clickLbl.Content.ToString() != "0" && firstValue != 0)
             {
                 secondValue = sw.ElapsedMilliseconds;
                 timerValue = secondValue - firstValue;
                 firstValue = secondValue;
             }
-            // Check if the first run 
             else
             {
                 firstValue = sw.ElapsedMilliseconds;
@@ -58,8 +56,8 @@ namespace Testing_App
             // Show popup if value < 0.1s
             if (timerValue < 100 && timeLbl.Content.ToString() != "0 ms")
             {
-                MessageBox.Show("Double clicked");
                 doubleLbl.Content = doubleClickCount++;
+                MessageBox.Show("Double clicked");
             }
         }
 
