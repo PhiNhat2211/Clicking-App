@@ -12,18 +12,18 @@
     <Grid x:Name="mainForm">
         <Grid Name="infoGrid" Margin="50,50">
             <Label HorizontalContentAlignment="Left" FontSize="25px" FontWeight="Bold">Time</Label>
-            <Label Name="timeLbl" FontSize="50px" HorizontalContentAlignment="Left" Margin="0,50">0 ms</Label>
+            <Label Name="timeLbl" FontSize="50px" HorizontalContentAlignment="Left" Margin="0,50" Foreground="Gray">0 ms</Label>
 
             <Label HorizontalContentAlignment="Center" FontSize="25px" FontWeight="Bold">Count</Label>
-            <Label Name="countLbl" FontSize="50px" HorizontalContentAlignment="Center" Margin="50">0</Label>
+            <Label Name="countLbl" FontSize="50px" HorizontalContentAlignment="Center" Margin="50" Foreground="Gray">0</Label>
 
             <Label HorizontalContentAlignment="Right" FontSize="25px" FontWeight="Bold">Double</Label>
-            <Label Name="doubleLbl" FontSize="50px" HorizontalContentAlignment="Right" Margin="0,50">0</Label>
+            <Label Name="doubleLbl" FontSize="50px" HorizontalContentAlignment="Right" Margin="0,50" Foreground="Gray">0</Label>
         </Grid>
 
         <Grid x:Name="buttonGrid" VerticalAlignment="Bottom" Width="500" Height="200">
-            <Button Name="btnCount" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Count_Click" Background="Blue" Foreground="White" HorizontalAlignment="Left">Click</Button>
-            <Button Name="btnReset" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Reset_Click" Background="Red" Foreground="White" HorizontalAlignment="Right">Reset</Button>
+            <Button Name="btnCount" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Count_Click" Background="LightSkyBlue" Foreground="White" HorizontalAlignment="Left" Content="Click"></Button>
+            <Button Name="btnReset" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Reset_Click" Background="OrangeRed" Foreground="White" HorizontalAlignment="Right" Content="Reset"></Button>
         </Grid>
     </Grid>
 </Window>

@@ -59,7 +59,7 @@ namespace Testing_App
             if (timeValue < 80 && timeLbl.Content.ToString() != "0 ms")
             {
                 doubleLbl.Content = doubleClickCount++;
-                MessageBox.Show("Double clicked");
+                MessageBox.Show("Double Clicked number " + (doubleClickCount - 1) + " at " + timeValue + " ms", "Alert", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
