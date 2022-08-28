@@ -56,7 +56,7 @@ namespace Testing_App
             timeLbl.Content = timeValue + " ms";
 
             // Show popup if value < 0.1s
-            if (timeValue < 100 && timeLbl.Content.ToString() != "0 ms")
+            if (timeValue < 80 && timeLbl.Content.ToString() != "0 ms")
             {
                 doubleLbl.Content = doubleClickCount++;
                 MessageBox.Show("Double clicked");
