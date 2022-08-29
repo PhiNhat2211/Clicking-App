@@ -12,7 +12,7 @@
     <Grid x:Name="mainForm">
         <Grid Name="infoGrid" Margin="50,50">
             <Label HorizontalContentAlignment="Left" FontSize="25px" FontWeight="Bold">Time</Label>
-            <Label Name="timeLbl" FontSize="50px" HorizontalContentAlignment="Left" Margin="0,50" Foreground="Gray">0 ms</Label>
+            <Label Name="timeLbl" FontSize="50px" HorizontalContentAlignment="Left" Margin="0,50" Foreground="Gray">0s</Label>
 
             <Label HorizontalContentAlignment="Center" FontSize="25px" FontWeight="Bold">Count</Label>
             <Label Name="countLbl" FontSize="50px" HorizontalContentAlignment="Center" Margin="50" Foreground="Gray">0</Label>

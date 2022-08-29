@@ -53,10 +53,10 @@ namespace Testing_App
 
             // Adding the timeValue after calculating to get the true result
             countLbl.Content = clickCount++;
-            timeLbl.Content = timeValue + " ms";
+            timeLbl.Content = (timeValue/1000) + "s";
 
             // Show popup if value < 0.1s
-            if (timeValue < 80 && timeLbl.Content.ToString() != "0 ms")
+            if (timeValue < 80 && timeLbl.Content.ToString() != "0s")
             {
                 doubleLbl.Content = doubleClickCount++;
                 MessageBox.Show("Double Clicked", "Alert", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -73,7 +73,7 @@ namespace Testing_App
             timeValue = 0;
 
             // Reset on UI
-            timeLbl.Content = "0 ms";
+            timeLbl.Content = "0s";
             countLbl.Content = "0";
             doubleLbl.Content = "0";
 
