@@ -19,11 +19,9 @@
 
             <Label HorizontalContentAlignment="Right" FontSize="25px" FontWeight="Bold">Double</Label>
             <Label Name="doubleLbl" FontSize="50px" HorizontalContentAlignment="Right" Margin="0,50" Foreground="Gray">0</Label>
-        </Grid>
 
-        <Grid x:Name="buttonGrid" VerticalAlignment="Bottom" Width="500" Height="200">
-            <Button Name="btnCount" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Count_Click" Background="LightSkyBlue" Foreground="White" HorizontalAlignment="Left" Content="Click"></Button>
-            <Button Name="btnReset" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Reset_Click" Background="OrangeRed" Foreground="White" HorizontalAlignment="Right" Content="Reset"></Button>
+            <Button Name="btnCount" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Count_Click" Background="LightSkyBlue" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="Click" Margin="100,0,0,0"></Button>
+            <Button Name="btnReset" Height="50px" Width="150px" FontSize="25px" PreviewMouseDown="Btn_Reset_Click" Background="OrangeRed" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Reset" Margin="0,0,100,0"></Button>
         </Grid>
     </Grid>
 </Window>
